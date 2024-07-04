@@ -25,6 +25,7 @@
   font-style: normal;
   font-weight: 400;
   line-height: normal;
+  padding-block: 102px;
 }
 
 /* Раскоментировать когда закончу проект */
@@ -44,21 +45,21 @@
 
 
 .header {
-  inline-size: clamp(23.188rem, 16.035rem + 30.52vw, 43.5rem);
+  max-inline-size: 696px;
   margin: 0 auto;
-  margin-block-start: 102px;
   border: 2px solid var(--color-accent);
   background: var(--color-bg);
+  margin-block-end: 96px;
 }
  
 .header__theme-menu {
-
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding-block-start: 135px;
+  padding-block-start: 136px;
 }
+
 .theme-menu__heading {
   color: var(--color-accent);
   font-family: var(--font-PressStart2P);;
@@ -66,6 +67,10 @@
   text-transform: uppercase;
   padding-block-end: 20px;
   text-decoration: none;
+}
+
+.theme-menu__heading:focus {
+  outline: none;
 }
 
 .theme-menu__text {
@@ -78,11 +83,12 @@
 }
 
 .theme-menu__list {
-  padding-block-end: 13px;
+  position: relative;
+  padding-block-end: 19px;
 }
-
+ 
 .theme-menu__item {
-  padding-block-end: 7px;
+  padding-block-end: 8px;
 }
 
 .theme-menu__item button {
@@ -96,18 +102,9 @@
   font-size: 14px;
   text-transform: uppercase;
   vertical-align: middle;
-
-}
-
-
-
-
-
-
-
-.theme-menu__button{
   position: relative;
   padding: 0 1px;
+  margin-inline-start: 21px;
 }
 
 .theme-menu__button::after {
@@ -120,29 +117,20 @@
   transition: transform 0.3s
 }
 
-.theme-menu__list {
-  position: relative;
-}
-
-
 .card {
-  inline-size: clamp(23.188rem, 16.035rem + 30.52vw, 43.5rem);
-  margin: 100px auto 51px;
+  max-inline-size: 696px;
+  margin: 11px auto 51px;
   border: 2px solid var(--color-accent);
   background-color: var(--color-bg);
 }
+
 .card__heading {
   color: var(--color-accent);
-font-family: var(--font-inter);
-font-size: 18px;
-font-weight: 700;
-padding: 5px 3px 5px 9px;
+  font-family: var(--font-inter);
+  font-size: 18px;
+  font-weight: 700;
+  padding: 5px 3px 5px 9px;
 }
-
-
-
-
-
 
 .card__img {
   position: relative;
@@ -176,9 +164,8 @@ padding: 5px 3px 5px 9px;
   }
 }
 
-
 .card__text {
-  padding: 31px 25px 25px;
+  padding: 31px 25px 18px;
 }
 
 .card__text p {
@@ -224,14 +211,11 @@ padding: 5px 3px 5px 9px;
   z-index: 2;
   color: var(--color-bg);
   mix-blend-mode: difference;
-
 }
 
 .button__text:has(:hover) {
   background-color: #fff;
 }
-
-
 
 @media (width < 400px) {
   .header {
@@ -247,7 +231,6 @@ padding: 5px 3px 5px 9px;
   inline-size: 340px;
   block-size: 53px;
   position: relative;
-  /* inline-size: clamp(19.125rem, 18.487rem + 2.72vw, 20.938rem); */
   display: flex;
   align-items: center;
   gap: 8px;
@@ -259,7 +242,6 @@ padding: 5px 3px 5px 9px;
   margin-block-end: 100px;
   overflow: hidden;
   cursor: pointer;
-
 }
 
 .floppy__icon {
@@ -289,8 +271,6 @@ padding: 5px 3px 5px 9px;
   padding-block-start: 5px;
 }
 
-
-
 /* Cостояния кнопок */
 
 .theme-menu__button:hover {
@@ -313,8 +293,6 @@ padding: 5px 3px 5px 9px;
   opacity: 0.6;
 }
 
-
-
 .theme-menu__button:focus-visible::after {
   width: 100%; 
   transform: scale(1, 1);
@@ -330,8 +308,6 @@ padding: 5px 3px 5px 9px;
   overflow: auto;
   cursor: pointer;
 }
-
-
 
 .floppy:focus,
 .card__icon-button:focus,
@@ -352,13 +328,11 @@ padding: 5px 3px 5px 9px;
   outline-offset: -3px;
 }
 
-
 .card__like-text:focus-visible {
   box-shadow: 2px 2px 0px 0px var(--color-accent);
   transition: .3s ease;
   padding: 0;
   outline-offset: 2px;
-
 }
 
 .floppy::before {
@@ -385,7 +359,6 @@ padding: 5px 3px 5px 9px;
   background-color: var(--color-accent);
   transform: translateX(-100%);
   transition: 0.5s ease-in-out;
-
 }
 
 .card__like-text:hover::before {
@@ -397,42 +370,110 @@ padding: 5px 3px 5px 9px;
   transform-origin: left;
 }
 
-/* анимации */
+/* dialog */
 
-.theme-menu__item:has(.theme-menu__button:disabled)::before  {
-  content: "▶";
-  margin-inline-end: 4px;
+.dialog[open] {
+  inline-size: clamp(21.313rem, 20.96rem + 1.5vw, 22.313rem);
+  position: fixed;
+  inset: 0;
+  border: 2px solid var(--color-accent);
+  background: var(--color-bg);
+  transition: opacity 0.3s ease-in-out;
+  padding: 31px;
+}
+
+dialog[open]::backdrop {
+  background-color: #000;
+  opacity: 0.75;
+}
+
+.dialog .dialog__row .floppy__icon {
+  width: 39px;
   vertical-align: middle;
-  position: absolute;
-  left: -20px;
-  animation: arrow 0.5s ease-in-out reverse infinite;
+  margin-right: 20px;
+  color: var(--color-bg);
+  mix-blend-mode: difference;
 }
 
-/* анимация сердца */
-
-.sparks {
-  opacity: 0;
+.dialog .dialog__row .floppy__text {
+  inline-size: 70%;
+  vertical-align: middle;
+  display: inline-block;
+  text-align: left;
+  color: var(--color-bg)
 }
 
-.card__icon-button {
-  cursor: pointer;
+.dialog__row {
+  margin-block-end: 30px;
 }
 
-.like-icon .core{
- transform: ease 0.3s;
+.dialog__button {
+  position: relative;
 }
 
-.like-icon:hover .core{
-  fill: var(--color-accent);
-  transition: fill 0.3s;
-  transition-delay: 0.05s;
+.dialog__button button {
+  inline-size: 100%;
+  height: 38px; 
+  text-transform: uppercase;
+  padding: 0;
+  margin-block-end: 0;
 }
 
-.like-icon .main-body{
-  transition: fill 0.03s;
+/* filter */
+
+.blur {
+  filter: blur(5px);
 }
 
-.like-icon:hover .main-body{
-  fill: var(--color-accent);
-  transition: fill 0.3s;
+.contrast {
+  filter: contrast(200%), blur(5px);
+}
+
+.grayscale {
+  filter: grayscale(80%);
+}
+
+.rotate {
+  filter: hue-rotate(90deg);
+}
+
+.sepia {
+  filter: sepia(80%);
+}
+
+.invert {
+  filter: invert(0.7);
+}
+
+.brightness {
+  filter: brightness(0.4);
+}
+
+.opacity {
+  filter: opacity(25%);
+}
+
+@media screen and (max-width: 375px) {
+  .header__theme-menu {
+    padding-block-start: 118px;
+  }
+
+  .card__heading {
+    inline-size: 280px;
+  }
+
+  .card__text {
+    padding: 31px 25px 12px;
+  }
+
+  .floppy {
+    inline-size: 311px;
+    block-size: 74px;
+    flex-direction: column;
+  }
+
+  .floppy .floppy__icon{
+    inline-size: 30px;
+    padding-block-start: 10px;
+  }
 }
