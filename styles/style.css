@@ -477,3 +477,45 @@ dialog[open]::backdrop {
     padding-block-start: 10px;
   }
 }
+
+/* dark theme  */
+
+.theme-dark .page {
+  background-color: var(--color-bg);
+  color: var(--color-accent);
+}
+
+.theme-dark .button__text {
+  --color-bg: #00CC14;
+}
+
+.theme-dark .floppy__icon, .theme-dark .floppy__text {
+  --color-bg: #00CC14;
+}
+
+@media screen and (max-width: 375px) {
+ 
+ .theme-dark .page {
+   padding-block: 102px 4px;
+ }
+
+ .theme-dark .floppy {
+  block-size: 81px;
+ }
+ 
+ .theme-dark .floppy .floppy__text {
+   padding-block-end: 9px;
+ }
+
+ .theme-dark .dialog[open] {
+  padding: 29px 36px 39px;
+ }
+
+ .theme-dark .dialog__button .floppy{
+  block-size: 40px;
+ }
+
+ .theme-dark .dialog .dialog__row .floppy__text {
+  width: 76%;
+ }
+}
