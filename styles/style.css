@@ -28,15 +28,6 @@
   padding-block: 102px;
 }
 
-/* Раскоментировать когда закончу проект */
-
-/* @media (prefers-color-scheme: dark) {
-  .page {
-    background-color: #000;
-    color: #00CC14;
-  }
-} */
-
 @supports (font-variation-settings: normal) {
   .page {
     font-family: "Inter", sans-serif;
