@@ -23,7 +23,7 @@
   background-image: var(--bg-image);
   background-size: cover;
   font-style: normal;
-  font-weight: 400;
+  font-weight: var(--font-weight-text);
   line-height: normal;
   padding-block: 102px;
 }
@@ -53,7 +53,7 @@
 
 .theme-menu__heading {
   color: var(--color-accent);
-  font-family: var(--font-PressStart2P);;
+  font-family: var(--font-PressStart2P);
   font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
   text-transform: uppercase;
   padding-block-end: 20px;
@@ -89,7 +89,7 @@
 
 .theme-menu__button {
   color: var(--color-accent);
-  font-family: var(--font-PressStart2P);;
+  font-family: var(--font-PressStart2P);
   font-size: 14px;
   text-transform: uppercase;
   vertical-align: middle;
@@ -119,7 +119,7 @@
   color: var(--color-accent);
   font-family: var(--font-inter);
   font-size: 18px;
-  font-weight: 700;
+  font-weight: var(--font-weight-description);
   padding: 5px 3px 5px 9px;
 }
 
@@ -141,7 +141,7 @@
   color: var(--color-accent);
   font-family: var(--font-PressStart2P);
   font-size: 14px;
-  font-weight: 400;
+  font-weight: var(--font-weight-text);
   line-height: normal;
   text-transform: uppercase;
   -webkit-text-stroke: 1px var(--color-bg);
@@ -163,7 +163,7 @@
   color: var(--color-accent);
   font-family: var(--font-inter);
   font-size: 18px;
-  font-weight: 400;
+  font-weight: var(--font-weight-text);
   line-height: 1.16;
 }
 
@@ -188,12 +188,12 @@
   color: var(--color-accent);
   font-family: var(--font-PressStart2P);
   font-size: 14px;
-  font-weight: 400;
+  font-weight: var(--font-weight-text);
   line-height: 1.26;
   border: none;
 }
 
-.button__text  {
+.button__text {
   display: block;
   border: 2px solid var(--color-bg);
   padding-block: 9px;
@@ -252,7 +252,7 @@
 .floppy__text {
   font-family: var(--font-PressStart2P);
   font-size: 14px;
-  font-weight: 400;
+  font-weight: var(--font-weight-text);
   line-height: 1.26;
   text-align: center;
   position: relative;
@@ -277,10 +277,6 @@
 
 .theme-menu__button:focus {
   outline: none;
-  opacity: 0.6;
-}
-
-.theme-menu__item:has(:disabled) {
   opacity: 0.6;
 }
 
@@ -463,7 +459,7 @@ dialog[open]::backdrop {
     flex-direction: column;
   }
 
-  .floppy .floppy__icon{
+  .floppy .floppy__icon {
     inline-size: 30px;
     padding-block-start: 10px;
   }
@@ -502,7 +498,7 @@ dialog[open]::backdrop {
   padding: 29px 36px 39px;
  }
 
- .theme-dark .dialog__button .floppy{
+ .theme-dark .dialog__button .floppy {
   block-size: 40px;
  }
 

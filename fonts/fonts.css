@@ -12,7 +12,7 @@
   font-family: "Press Start 2P";
   src: url("../fonts/PressStart2P-Regular.woff");
   src: url("../fonts/PressStart2P-Regular.woff") format('woff supports variations'), url("../fonts/PressStart2P-Regular.woff") format('woff-variations');
-  font-weight: 400;
+  font-weight: 400 785;
 }
 
 

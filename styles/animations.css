@@ -24,7 +24,7 @@
 
 /* анимация стрелочки в хедере */
 
-.theme-menu__item:has(.theme-menu__button:disabled)::before  {
+.theme-menu__item:has(.theme-menu__button:disabled)::before {
   content: "▶";
   margin-inline-end: 4px;
   vertical-align: middle;
@@ -72,22 +72,10 @@
 
 /* active */
 
-.like-icon .main-body {
-  transition-property: fill;
-  transition-duration: .03s;
-  transition-timing-function: linear;
-}
-
 .like-icon:active .main-body {
   fill: var(--core-sparks-svg);
   transition-property: fill;
   transition-duration: .03s;
-  transition-timing-function: linear;
-}
-
-.like-icon .core {
-  transition-property: fill;
-  transition-duration: .3s;
   transition-timing-function: linear;
 }
 
