@@ -6,7 +6,6 @@
   --font-PressStart2P: 'Press Start 2P';
   --font-weight-text: 400;
   --font-weight-description: 700;
-  --font-variation-setting: "wght" 400, "wght" 785;
   --color-bg: #fff;
   --color-accent: #000;
   --bg-image: repeating-linear-gradient(to right, #d3d3d3, #d3d3d3 2px, transparent 2px, transparent 4px),
@@ -16,7 +15,3 @@
   --core-sparks-svg: #FF0000;
   --main-body-svg: white;
 }
-
-
-
-

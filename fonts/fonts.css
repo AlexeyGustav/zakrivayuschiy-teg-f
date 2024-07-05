@@ -2,7 +2,7 @@
 @font-face {
   font-display: swap;
   font-family: "Inter";
-  src: url("../fonts/Inter-Variable.woff2") format('woff2 supports variations'), url("../fonts/Inter-Variable.woff2") format('woff2-variations');
+  src: url("../fonts/Inter-Variable.woff2") format('woff2 supports variations'), url("../fonts/Inter-Variable.woff2") format('woff2-variations'), url("../fonts/Inter/Inter-Regular.ttf") format('ttf');
   font-weight: 400 785;
 }
 

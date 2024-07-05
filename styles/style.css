@@ -23,8 +23,7 @@
   background-image: var(--bg-image);
   background-size: cover;
   font-style: normal;
-  /* font-weight: var(--font-weight-text); */
-  font-variation-settings: "wght" var(--font-weight-text);
+  font-weight: var(--font-weight-text);
   line-height: normal;
   padding-block: 102px;
 }
@@ -33,8 +32,7 @@
   .page {
     font-family: "Inter", sans-serif;
   }
-} 
-
+}
 
 .header {
   max-inline-size: 696px;
@@ -120,16 +118,18 @@
   color: var(--color-accent);
   font-family: var(--font-inter), sans-serif;
   font-size: 18px;
-  /* font-weight: var(--font-weight-description); */
   font-variation-settings: "wght" var(--font-weight-description);
   padding: 5px 3px 5px 9px;
+  border-bottom: 2px solid var(--color-accent);
 }
 
 .card__img {
+  border-bottom: 2px solid var(--color-accent);
   position: relative;
 }
 
 .card__img_bg {
+  display: block;
   width: 100%;
   object-fit: cover;
   object-position: center;
@@ -165,7 +165,6 @@
   color: var(--color-accent);
   font-family: var(--font-inter), sans-serif;
   font-size: 18px;
-  /* font-weight: var(--font-weight-text); */
   font-variation-settings: "wght" var(--font-weight-text);
   line-height: 1.16;
 }
@@ -256,14 +255,12 @@
   font-family: var(--font-PressStart2P), 'fantasy';
   font-size: 14px;
   font-weight: var(--font-weight-text);
-  /* font-variation-settings: "wght" var(--font-weight-text); */
   line-height: 1.26;
   text-align: center;
   position: relative;
   z-index: 2;
   color: var(--color-bg);
   mix-blend-mode: difference;
-  padding-block-start: 5px;
 }
 
 /* Cостояния кнопок */
@@ -358,7 +355,7 @@
   display: block;
   cursor: pointer;
   transform: translateX(0);
-  transform-origin: left;
+  transform-origin: right;
 }
 
 /* dialog */
@@ -410,6 +407,10 @@ dialog[open]::backdrop {
   margin-block-end: 0;
 }
 
+.display {
+  display: none;
+}
+
 /* filter */
 
 .blur {
@@ -449,23 +450,26 @@ dialog[open]::backdrop {
     padding-block-start: 118px;
   }
 
-  .card__heading {
-    inline-size: 280px;
-  }
-
   .card__text {
     padding: 31px 25px 12px;
   }
 
   .floppy {
     inline-size: 311px;
-    block-size: 74px;
+    block-size: 83px;
     flex-direction: column;
   }
 
   .floppy .floppy__icon {
     inline-size: 30px;
-    padding-block-start: 10px;
+  }
+
+  .display {
+    display: block;
+  }
+
+  .card__img_text  {
+    right: 11px;
   }
 }
 
@@ -491,11 +495,7 @@ dialog[open]::backdrop {
  }
 
  .theme-dark .floppy {
-  block-size: 81px;
- }
- 
- .theme-dark .floppy .floppy__text {
-   padding-block-end: 9px;
+  block-size: 85px;
  }
 
  .theme-dark .dialog[open] {

@@ -5,24 +5,21 @@
 ✦ не забудьте описать стили для изменения темы через медизапрос пользовательских предпочтений
 */
 
-@media (prefers-color-scheme: light) {
-  :root.theme-light {
-    --font-inter: 'Inter';
-    --font-PressStart2P: 'Press Start 2P';
-    --font-weight-text: 400;
-    --font-weight-description: 700;
-    --color-bg: #fff;
-    --color-accent: #000;
-    --bg-image: repeating-linear-gradient(to right, #d3d3d3, #d3d3d3 2px, transparent 2px, transparent 4px),
-      repeating-linear-gradient(to bottom, #d3d3d3, #d3d3d3 2px, transparent 2px, transparent 4px),
-      linear-gradient(to bottom, #e7e7e7, #e7e7e7 0.01%, #1a1a1a 100%);
-      --contour-svg: #000;
-      --core-sparks-svg: #FF0000;
-      --main-body-svg: white;
-  }
+:root.theme-light {
+  --font-inter: 'Inter';
+  --font-PressStart2P: 'Press Start 2P';
+  --font-weight-text: 400;
+  --font-weight-description: 700;
+  --color-bg: #fff;
+  --color-accent: #000;
+  --bg-image: repeating-linear-gradient(to right, #d3d3d3, #d3d3d3 2px, transparent 2px, transparent 4px),
+    repeating-linear-gradient(to bottom, #d3d3d3, #d3d3d3 2px, transparent 2px, transparent 4px),
+    linear-gradient(to bottom, #e7e7e7, #e7e7e7 0.01%, #1a1a1a 100%);
+  --contour-svg: #000;
+  --core-sparks-svg: #FF0000;
+  --main-body-svg: white;
 }
 
-@media (prefers-color-scheme: dark) {
 :root.theme-dark {
   --font-weight-text: 465;
   --font-weight-description: 785;
@@ -31,8 +28,36 @@
   --bg-image: repeating-linear-gradient(to right, #000, #000 2px, transparent 2px, transparent 4px),
     repeating-linear-gradient(to bottom, #000, #000 2px, transparent 2px, transparent 4px),
     linear-gradient(to bottom, #007f0c, #007f0c 0.01%, #004306 100%);
+  --contour-svg: #00CC14;
+  --sparks-svg: #FF0000;
+  --main-body-svg: white;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --font-weight-text: 465;
+    --font-weight-description: 785;
+    --color-bg: #000;
+    --color-accent: #00CC14;
+    --bg-image: repeating-linear-gradient(to right, #000, #000 2px, transparent 2px, transparent 4px),
+      repeating-linear-gradient(to bottom, #000, #000 2px, transparent 2px, transparent 4px),
+      linear-gradient(to bottom, #007f0c, #007f0c 0.01%, #004306 100%);
     --contour-svg: #00CC14;
     --sparks-svg: #FF0000;
     --main-body-svg: white;
-}
+  }
+
+  .page {
+    background-color: var(--color-bg);
+    color: var(--color-accent);
+  }
+  
+  .button__text {
+    --color-bg: #00CC14;
+  }
+  
+  .floppy__icon, .floppy__text {
+    --color-bg: #00CC14;
+  }
+
 }
