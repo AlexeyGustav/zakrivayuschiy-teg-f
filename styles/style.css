@@ -468,7 +468,7 @@ dialog[open]::backdrop {
     display: block;
   }
 
-  .card__img_text  {
+  .card__img_text {
     right: 11px;
   }
 }
