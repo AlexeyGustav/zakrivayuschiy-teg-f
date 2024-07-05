@@ -285,7 +285,7 @@
 }
 
 .theme-menu__button:focus-visible::after {
-  width: 100%; 
+  width: 100%;
   transform: scale(1, 1);
   transform-origin: left;
   opacity: 0.6;
@@ -404,7 +404,7 @@ dialog[open]::backdrop {
 
 .dialog__button button {
   inline-size: 100%;
-  height: 38px; 
+  height: 38px;
   text-transform: uppercase;
   padding: 0;
   margin-block-end: 0;
