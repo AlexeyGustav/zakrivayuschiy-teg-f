@@ -23,7 +23,8 @@
   background-image: var(--bg-image);
   background-size: cover;
   font-style: normal;
-  font-weight: var(--font-weight-text);
+  /* font-weight: var(--font-weight-text); */
+  font-variation-settings: "wght" var(--font-weight-text);
   line-height: normal;
   padding-block: 102px;
 }
@@ -53,7 +54,7 @@
 
 .theme-menu__heading {
   color: var(--color-accent);
-  font-family: var(--font-PressStart2P);
+  font-family: var(--font-PressStart2P), 'fantasy';
   font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem);
   text-transform: uppercase;
   padding-block-end: 20px;
@@ -66,7 +67,7 @@
 
 .theme-menu__text {
   color: var(--color-accent);
-  font-family: var(--font-PressStart2P);
+  font-family: var(--font-PressStart2P), 'fantasy';
   font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem);
   text-transform: uppercase;
   padding-block-end: 20px;
@@ -89,7 +90,7 @@
 
 .theme-menu__button {
   color: var(--color-accent);
-  font-family: var(--font-PressStart2P);
+  font-family: var(--font-PressStart2P), 'fantasy';
   font-size: 14px;
   text-transform: uppercase;
   vertical-align: middle;
@@ -117,9 +118,10 @@
 
 .card__heading {
   color: var(--color-accent);
-  font-family: var(--font-inter);
+  font-family: var(--font-inter), sans-serif;
   font-size: 18px;
-  font-weight: var(--font-weight-description);
+  /* font-weight: var(--font-weight-description); */
+  font-variation-settings: "wght" var(--font-weight-description);
   padding: 5px 3px 5px 9px;
 }
 
@@ -139,9 +141,10 @@
   top: 26px;
   right: 22px;
   color: var(--color-accent);
-  font-family: var(--font-PressStart2P);
+  font-family: var(--font-PressStart2P), 'fantasy';
   font-size: 14px;
-  font-weight: var(--font-weight-text);
+  /* font-weight: var(--font-weight-text); */
+  font-variation-settings: "wght" var(--font-weight-text);
   line-height: normal;
   text-transform: uppercase;
   -webkit-text-stroke: 1px var(--color-bg);
@@ -161,9 +164,10 @@
 
 .card__text p {
   color: var(--color-accent);
-  font-family: var(--font-inter);
+  font-family: var(--font-inter), sans-serif;
   font-size: 18px;
-  font-weight: var(--font-weight-text);
+  /* font-weight: var(--font-weight-text); */
+  font-variation-settings: "wght" var(--font-weight-text);
   line-height: 1.16;
 }
 
@@ -186,9 +190,10 @@
 .card__like button {
   background: var(--color-bg);
   color: var(--color-accent);
-  font-family: var(--font-PressStart2P);
+  font-family: var(--font-PressStart2P), 'fantasy';
   font-size: 14px;
-  font-weight: var(--font-weight-text);
+  /* font-weight: var(--font-weight-text); */
+  font-variation-settings: "wght" var(--font-weight-text);
   line-height: 1.26;
   border: none;
 }
@@ -250,9 +255,10 @@
 }
 
 .floppy__text {
-  font-family: var(--font-PressStart2P);
+  font-family: var(--font-PressStart2P), 'fantasy';
   font-size: 14px;
-  font-weight: var(--font-weight-text);
+  /* font-weight: var(--font-weight-text); */
+  font-variation-settings: "wght" var(--font-weight-text);
   line-height: 1.26;
   text-align: center;
   position: relative;
@@ -413,7 +419,7 @@ dialog[open]::backdrop {
 }
 
 .contrast {
-  filter: contrast(200%), blur(5px);
+  filter: contrast(200%) blur(5px);
 }
 
 .grayscale {
