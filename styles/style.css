@@ -143,8 +143,7 @@
   color: var(--color-accent);
   font-family: var(--font-PressStart2P), 'fantasy';
   font-size: 14px;
-  /* font-weight: var(--font-weight-text); */
-  font-variation-settings: "wght" var(--font-weight-text);
+  font-weight: var(--font-weight-text);
   line-height: normal;
   text-transform: uppercase;
   -webkit-text-stroke: 1px var(--color-bg);
@@ -192,8 +191,7 @@
   color: var(--color-accent);
   font-family: var(--font-PressStart2P), 'fantasy';
   font-size: 14px;
-  /* font-weight: var(--font-weight-text); */
-  font-variation-settings: "wght" var(--font-weight-text);
+  font-weight: var(--font-weight-text);
   line-height: 1.26;
   border: none;
 }
@@ -257,8 +255,8 @@
 .floppy__text {
   font-family: var(--font-PressStart2P), 'fantasy';
   font-size: 14px;
-  /* font-weight: var(--font-weight-text); */
-  font-variation-settings: "wght" var(--font-weight-text);
+  font-weight: var(--font-weight-text);
+  /* font-variation-settings: "wght" var(--font-weight-text); */
   line-height: 1.26;
   text-align: center;
   position: relative;
