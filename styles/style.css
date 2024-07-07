@@ -14,6 +14,27 @@
 
 */
 
+@media (prefers-color-scheme: dark) {
+  :root {
+    --font-weight-text: 465;
+    --font-weight-description: 785;
+    --color-bg: #000;
+    --color-accent: #00CC14;
+    --bg-image: repeating-linear-gradient(to right, #000, #000 2px, transparent 2px, transparent 4px),
+      repeating-linear-gradient(to bottom, #000, #000 2px, transparent 2px, transparent 4px),
+      linear-gradient(to bottom, #007f0c, #007f0c 0.01%, #004306 100%);
+    --contour-svg: #00CC14;
+    --sparks-svg: #FF0000;
+    --main-body-svg: white;
+  }
+
+  .page {
+    background-color: var(--color-bg);
+    color: var(--color-accent);
+  }
+
+}
+
 .page {
   min-inline-size: 320px;
   min-block-size: 100dvb;
@@ -174,8 +195,12 @@
   margin-block-end: 7px;
 }
 
-.card__like {
+.card__like:first-child {
   height: 38px;
+}
+
+.card__like {
+  height: 40px;
   display: flex;
   position: relative;
   justify-content: end;
@@ -186,6 +211,8 @@
 }
 
 .card__like button {
+  height: 99%;
+  overflow: hidden;
   background: var(--color-bg);
   color: var(--color-accent);
   font-family: var(--font-PressStart2P), 'fantasy';
@@ -343,6 +370,7 @@
   width: 0;
   content: "";
   position: absolute;
+  top: 0;
   left: 0;
   background-color: var(--color-accent);
   transform: translateX(-100%);

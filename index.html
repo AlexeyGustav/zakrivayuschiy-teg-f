@@ -10,11 +10,11 @@
     <title>Закрывающий тег</title>
 
     <link rel="stylesheet" href="./fonts/fonts.css" />
-    <link rel="stylesheet" href="./styles/variables.css" />
     <link rel="stylesheet" href="./styles/globals.css" />
-    <link rel="stylesheet" href="./styles/style.css" />
-    <link rel="stylesheet" href="./styles/animations.css" />
     <link rel="stylesheet" href="./styles/themes.css" />
+    <link rel="stylesheet" href="./styles/variables.css" />
+    <link rel="stylesheet" href="./styles/animations.css" />
+    <link rel="stylesheet" href="./styles/style.css" />
     <script src="./scripts/set-theme.js"></script>
   </head>
   <body class="page">
@@ -416,7 +416,6 @@
       </button>
 
       <dialog id="dialog-id" class="dialog">
-        <form method="dialog">
           <div class="dialog__row">
             <svg class="floppy__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21 21">
               <use href="./svg/floppy.svg#floppy"></use>
@@ -426,15 +425,16 @@
               дискету, чтобы продолжить
             </span>
           </div>
-          <div class="dialog__button">
-            <button class="floppy" type="button" 
-            onclick="window['dialog-id'].close()">
-              <span class="floppy__text">
-                ок
-              </span>
-            </button>
-          </div>
-        </form>
+          <form method="dialog">
+            <div class="dialog__button">
+              <button class="floppy"
+              >
+                <span class="floppy__text">
+                  ок
+                </span>
+              </button>
+            </div>
+          </form>
       </dialog>
     </main>
     <script src="./scripts/like.js"></script>
